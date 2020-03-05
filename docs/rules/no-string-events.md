@@ -1,36 +1,35 @@
-# Dissallows string literal event names (no-string-events)
-
-Please describe the origin of the rule here.
-
+# Disallows string literal event names (no-string-events)
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to prevent typos when creating/subscribing to events, and also disallows dynamic event names.
 
 Examples of **incorrect** code for this rule:
 
 ```js
+myClass.on('change', () => {
 
-// fill me in
+});
+```
 
+```js
+const someFunction = (name) => {
+  myClass.on(name, () => {
+
+  })
+}
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
+myClass.on(MyClass.Events.CHANGE, () => {
 
-// fill me in
-
+});
 ```
 
 ### Options
 
 If there are any options, describe them here. Otherwise, delete this section.
 
-## When Not To Use It
-
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+`eventFunctions`: An array of function names to look for. Defaults to `['on', 'off', 'trigger', 'once']`
