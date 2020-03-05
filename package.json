@@ -1,6 +1,6 @@
 {
-  "name": "eslint-plugin-no-string-events",
-  "version": "0.0.0",
+  "name": "@pdftron/eslint-plugin-no-string-events",
+  "version": "0.0.1",
   "description": "Disallows accessing event with string literals",
   "keywords": [
     "eslint",
@@ -10,7 +10,8 @@
   "author": "Logan",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "publish": "npm run publish"
   },
   "dependencies": {
     "requireindex": "~1.1.0"
