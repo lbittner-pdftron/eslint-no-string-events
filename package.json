@@ -1,7 +1,7 @@
 {
-  "name": "@pdftron/eslint-plugin-no-string-events",
+  "name": "@pdftron/eslint-plugin-webviewer",
   "version": "0.0.1",
-  "description": "Disallows accessing event with string literals",
+  "description": "ESLint Plugin containing custom WebViewer rules",
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -10,8 +10,7 @@
   "author": "Logan",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive",
-    "publish": "npm run publish"
+    "test": "mocha tests --recursive"
   },
   "dependencies": {
     "requireindex": "~1.1.0"
